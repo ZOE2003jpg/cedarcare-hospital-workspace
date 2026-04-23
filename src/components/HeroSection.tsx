@@ -28,7 +28,7 @@ const slides = [
   },
   {
     image: CedarcareWard,
-    headline: "Compassionate Inpatient Care",
+    headline: "Compassionate Patient Care",
     subtitle: "Round-the-clock nursing and medical attention"
   },
   {
@@ -209,13 +209,15 @@ const HeroSection = () => {
       {/* Desktop Carousel Navigation */}
       <button
         onClick={prevSlide}
-        className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-primary/30 backdrop-blur-sm border border-white/20 items-center justify-center text-white hover:bg-primary/50 transition-colors"
+        aria-label="Previous slide"
+        className="hidden md:flex absolute left-8 bottom-48 z-20 w-12 h-12 rounded-full bg-primary/30 backdrop-blur-sm border border-white/20 items-center justify-center text-white hover:bg-primary/50 transition-colors"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-primary/30 backdrop-blur-sm border border-white/20 items-center justify-center text-white hover:bg-primary/50 transition-colors"
+        aria-label="Next slide"
+        className="hidden md:flex absolute right-8 bottom-48 z-20 w-12 h-12 rounded-full bg-primary/30 backdrop-blur-sm border border-white/20 items-center justify-center text-white hover:bg-primary/50 transition-colors"
       >
         <ChevronRight className="w-6 h-6" />
       </button>

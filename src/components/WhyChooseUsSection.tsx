@@ -31,8 +31,8 @@ const reasons = [
 
 const services = [
   { icon: Stethoscope, title: "General & Family Medicine", color: "hsl(217,91%,60%)" },
-  { icon: Baby, title: "Pediatrics", color: "hsl(210,50%,45%)" },
-  { icon: Heart, title: "Obstetrics & Gynecology", color: "hsl(340,60%,50%)" },
+  { icon: Baby, title: "Paediatrics", color: "hsl(210,50%,45%)" },
+  { icon: Heart, title: "Obstetrics & Gynaecology", color: "hsl(340,60%,50%)" },
   { icon: FlaskConical, title: "Diagnostics & Laboratory", color: "hsl(40,70%,50%)" },
   { icon: Pill, title: "Pharmacy Services", color: "hsl(217,91%,60%)" },
   { icon: Ambulance, title: "Emergency Care", color: "hsl(0,70%,50%)" },
