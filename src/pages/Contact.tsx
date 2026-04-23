@@ -125,130 +125,64 @@ const Contact = () => {
                     </div>
                     <div className="pt-4 border-t border-border">
                       <span className="inline-flex items-center px-4 py-2 rounded-full bg-red-50 text-red-600 font-medium text-sm">
-                        🚨 {location.emergency}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
+      {/* Get In Touch */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 max-w-2xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Get In Touch
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Have a question, need to book an appointment, or want to provide feedback? Reach out to us using any of the channels below and our patient care team will respond promptly.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <a
+              href="tel:+2347062641810"
+              className="flex flex-col items-center text-center gap-4 p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Send Us a Message
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Have a question, need to book an appointment, or want to provide feedback? Fill out the form and our team will get back to you promptly.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Call Us</h4>
-                    <p className="text-muted-foreground text-sm">For urgent matters, call us directly</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-                  <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
-                    <MessageSquare className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">WhatsApp</h4>
-                    <p className="text-muted-foreground text-sm">Chat with us on WhatsApp for quick responses</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-muted-foreground text-sm">info@cedarcaregroup.com</p>
-                  </div>
-                </div>
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                <Phone className="w-7 h-7 text-primary" />
               </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-xl"
+              <div>
+                <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
+                <p className="text-muted-foreground text-sm">+234 706 264 1810</p>
+              </div>
+            </a>
+
+            <a
+              href="https://wa.me/2347062641810"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center text-center gap-4 p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
             >
-              <form className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" placeholder="Enter your name" className="mt-1" />
-                  </div>
-                  <div>
-                    <Label htmlFor="contactPhone">Phone Number</Label>
-                    <Input id="contactPhone" placeholder="Enter phone number" className="mt-1" />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="contactEmail">Email Address</Label>
-                  <Input id="contactEmail" type="email" placeholder="Enter email address" className="mt-1" />
-                </div>
-                <div>
-                  <Label htmlFor="subject">Subject</Label>
-                  <Select>
-                    <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Select subject" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="appointment">Book Appointment</SelectItem>
-                      <SelectItem value="enquiry">General Enquiry</SelectItem>
-                      <SelectItem value="complaint">Complaint</SelectItem>
-                      <SelectItem value="feedback">Feedback</SelectItem>
-                      <SelectItem value="hmo">HMO/Insurance Query</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label htmlFor="preferredLocation">Preferred Location</Label>
-                  <Select>
-                    <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Select location" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="agungi">Agungi Branch - Lekki</SelectItem>
-                      <SelectItem value="ogombo">Ogombo Branch</SelectItem>
-                      <SelectItem value="any">Any Location</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label htmlFor="contactMessage">Message</Label>
-                  <Textarea 
-                    id="contactMessage" 
-                    placeholder="How can we help you?" 
-                    className="mt-1 min-h-[120px]" 
-                  />
-                </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full py-6">
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Message
-                </Button>
-              </form>
-            </motion.div>
+              <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+                <MessageSquare className="w-7 h-7 text-blue-600" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
+                <p className="text-muted-foreground text-sm">Chat with us anytime</p>
+              </div>
+            </a>
+
+            <a
+              href="mailto:info@cedarcaregroup.com"
+              className="flex flex-col items-center text-center gap-4 p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                <Mail className="w-7 h-7 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground mb-1">Email</h4>
+                <p className="text-muted-foreground text-sm">info@cedarcaregroup.com</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
