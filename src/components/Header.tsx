@@ -11,7 +11,7 @@ const navItems = [
   { name: "Our Services", href: "/services" },
   { name: "Departments", href: "/departments" },
   { name: "Health Resources", href: "/health-resources" },
-  { name: "Blog", href: "https://www.Cedarcaregroup.com/hospital/category/blog/", external: true },
+  { name: "Blog", href: "https://www.cedarcaregroup.com/hospital/category/blog/", external: true },
   { name: "Careers", href: "/careers" },
   { name: "Contact Us", href: "/contact" },
 ] as const;

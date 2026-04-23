@@ -30,9 +30,9 @@ const footerLinks = {
 
 const socialLinks = [
   { icon: Facebook, href: "https://www.facebook.com/share/1AFFGhs4u8/?mibextid=wwXIfr", label: "Facebook" },
-  { icon: Instagram, href: "https://www.instagram.com/Cedarcarehospital?igsh=YXM2aWlvazZ2a3N4&utm_source=qr", label: "Instagram" },
-  { icon: XIcon, href: "https://x.com/_Cedarcare?s=21&t=VM3cXDk5rK1XDhCT3X2F7Q", label: "X" },
-  { icon: Linkedin, href: "https://www.linkedin.com/company/Cedarcare-hospital/", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/cedarcarehospital?igsh=YXM2aWlvazZ2a3N4&utm_source=qr", label: "Instagram" },
+  { icon: XIcon, href: "https://x.com/_cedarcare?s=21&t=VM3cXDk5rK1XDhCT3X2F7Q", label: "X" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/cedarcare-hospital/", label: "LinkedIn" },
 ];
 
 const Footer = () => {
@@ -73,9 +73,9 @@ const Footer = () => {
 
             {/* Contact info */}
             <div className="space-y-3">
-              <a href="mailto:info@Cedarcare.com" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors">
+              <a href="mailto:info@cedarcaregroup.com" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>info@Cedarcare.com</span>
+                <span>info@cedarcaregroup.com</span>
               </a>
               <a href="tel:+2347062641810" className="flex items-center space-x-3 text-white/60 hover:text-[hsl(217,91%,70%)] transition-colors">
                 <Phone className="w-4 h-4" />
