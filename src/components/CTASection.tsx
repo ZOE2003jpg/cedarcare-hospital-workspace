@@ -134,7 +134,7 @@ const CTASection = () => {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
               <p className="text-white/60">Lagos, Nigeria</p>
-               <a href="https://www.google.com/maps/search/cedarcare+hospital+lagos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[hsl(217,91%,70%)] font-medium hover:underline mt-2">
+               <a href="https://www.google.com/maps/search/Cedarcare+hospital+lagos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[hsl(217,91%,70%)] font-medium hover:underline mt-2">
                  Get Directions
                  <ArrowRight className="w-4 h-4 ml-1" />
                </a>

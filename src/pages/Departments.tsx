@@ -5,7 +5,7 @@ import PageTransition from "@/components/PageTransition";
 import { Stethoscope, Heart, Pill, Building2, Shield, ArrowRight, Phone, Mail, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import cedarcareLabTechnician from "@/assets/cedarcare-lab-technician.jpg";
+import CedarcareLabTechnician from "@/assets/Cedarcare-lab-technician.jpg";
 
 const departments = [
   {
@@ -94,7 +94,7 @@ const Departments = () => {
       {/* Hero Banner */}
        <section className="relative pt-32 pb-20 overflow-hidden">
          <div className="absolute inset-0">
-           <img src={cedarcareLabTechnician} alt="Departments" className="w-full h-full object-cover" />
+           <img src={CedarcareLabTechnician} alt="Departments" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/80 to-[hsl(210,50%,10%)]/60" />
          </div>
          <div className="container mx-auto px-4 md:px-8 relative z-10">

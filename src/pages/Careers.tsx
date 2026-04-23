@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import cedarcareReception from "@/assets/cedarcare-reception.jpg";
+import CedarcareReception from "@/assets/Cedarcare-reception.jpg";
 
 const whyWorkWithUs = [
   {
@@ -41,7 +41,7 @@ const Careers = () => {
       {/* Hero Banner */}
        <section className="relative pt-32 pb-20 overflow-hidden">
          <div className="absolute inset-0">
-           <img src={cedarcareReception} alt="Careers at cedarcare" className="w-full h-full object-cover" />
+           <img src={CedarcareReception} alt="Careers at Cedarcare" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/80 to-[hsl(210,50%,10%)]/60" />
          </div>
          <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -58,7 +58,7 @@ const Careers = () => {
                <span className="text-[hsl(217,91%,60%)]">Careers</span>
              </h1>
              <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-               Join Our Team. cedarcare Hospital is always seeking dedicated professionals passionate about patient care. Build a rewarding career with us and make a difference in healthcare.
+               Join Our Team. Cedarcare Hospital is always seeking dedicated professionals passionate about patient care. Build a rewarding career with us and make a difference in healthcare.
              </p>
            </motion.div>
          </div>
@@ -77,7 +77,7 @@ const Careers = () => {
               Why Work With Us
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              At cedarcare, we invest in our people because we know that exceptional care starts with exceptional staff.
+              At Cedarcare, we invest in our people because we know that exceptional care starts with exceptional staff.
             </p>
           </motion.div>
           
@@ -121,7 +121,7 @@ const Careers = () => {
                  If you would like to be considered for future opportunities, please submit your details using the form or apply directly through our HR portal.
                </p>
                <a
-                 href="https://apply.bizedgeapp.com/cedarcare-hospital/175469876032/315"
+                 href="https://apply.bizedgeapp.com/Cedarcare-hospital/175469876032/315"
                  target="_blank"
                  rel="noopener noreferrer"
                >

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import logo from "@/assets/cedarcare-logo.png";
+import logo from "@/assets/Cedarcare-logo.png";
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -97,7 +97,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
                 
                 <motion.img
                   src={logo}
-                  alt="cedarcare Hospital"
+                  alt="Cedarcare Hospital"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
@@ -113,7 +113,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight">
-                The <span className="text-[hsl(217,91%,70%)]">cedarcare</span> Group
+                The <span className="text-[hsl(217,91%,70%)]">Cedarcare</span> Group
               </h1>
               <motion.div
                 initial={{ width: 0 }}

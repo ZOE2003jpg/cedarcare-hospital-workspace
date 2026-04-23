@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import { Heart, Activity, Baby, Shield, Stethoscope } from "lucide-react";
-import cedarcareWard from "@/assets/cedarcare-ward.jpg";
+import CedarcareWard from "@/assets/Cedarcare-ward.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -64,7 +64,7 @@ const HealthResources = () => {
       {/* Hero Banner */}
        <section className="relative pt-32 pb-20 overflow-hidden">
          <div className="absolute inset-0">
-           <img src={cedarcareWard} alt="Health Resources" className="w-full h-full object-cover" />
+           <img src={CedarcareWard} alt="Health Resources" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/80 to-[hsl(210,50%,10%)]/60" />
          </div>
          <div className="container mx-auto px-4 md:px-8 relative z-10">

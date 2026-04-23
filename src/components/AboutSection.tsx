@@ -79,7 +79,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6">
-              <span className="text-sm text-primary font-medium">About cedarcare Hospital</span>
+              <span className="text-sm text-primary font-medium">About Cedarcare Hospital</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
@@ -88,7 +88,7 @@ const AboutSection = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              cedarcare Hospital is a patient-focused healthcare provider committed to delivering accessible, 
+              Cedarcare Hospital is a patient-focused healthcare provider committed to delivering accessible, 
               ethical, and high-quality medical services. We believe healthcare should be compassionate, 
               professional, and rooted in integrity.
             </p>
@@ -124,7 +124,7 @@ const AboutSection = () => {
             Our Core Values
           </h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            The principles that guide everything we do at cedarcare Hospital
+            The principles that guide everything we do at Cedarcare Hospital
           </p>
         </motion.div>
 

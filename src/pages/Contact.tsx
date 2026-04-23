@@ -21,7 +21,7 @@ const locations = [
     name: "Agungi Branch - Lekki",
     address: "123 Agungi Road, Lekki, Lagos, Nigeria",
     phone: "+234 706 264 1810",
-    email: "agungi@cedarcaregroup.com",
+    email: "agungi@Cedarcaregroup.com",
     hours: "Open 24 Hours",
     emergency: "24/7 Emergency Services",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7294!2d3.5245!3d6.4312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjUnNTIuMyJOIDPCsDMxJzI4LjIiRQ!5e0!3m2!1sen!2sng!4v1234567890",
@@ -30,7 +30,7 @@ const locations = [
     name: "Ogombo Branch",
     address: "45 Ogombo Road, Ajah, Lagos, Nigeria",
     phone: "+234 909 000 3798",
-    email: "ogombo@cedarcaregroup.com",
+    email: "ogombo@Cedarcaregroup.com",
     hours: "Open 24 Hours",
     emergency: "24/7 Emergency Services",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7294!2d3.5845!3d6.4512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjcnMDQuMyJOIDPCsDM1JzA0LjIiRQ!5e0!3m2!1sen!2sng!4v1234567890",
@@ -190,7 +190,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-muted-foreground text-sm">info@cedarcaregroup.com</p>
+                    <p className="text-muted-foreground text-sm">info@Cedarcaregroup.com</p>
                   </div>
                 </div>
               </div>

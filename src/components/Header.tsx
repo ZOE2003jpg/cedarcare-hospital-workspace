@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Search, Phone, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/cedarcare-logo.png";
+import logo from "@/assets/Cedarcare-logo.png";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -11,7 +11,7 @@ const navItems = [
   { name: "Our Services", href: "/services" },
   { name: "Departments", href: "/departments" },
   { name: "Health Resources", href: "/health-resources" },
-  { name: "Blog", href: "https://www.cedarcaregroup.com/hospital/category/blog/", external: true },
+  { name: "Blog", href: "https://www.Cedarcaregroup.com/hospital/category/blog/", external: true },
   { name: "Careers", href: "/careers" },
   { name: "Contact Us", href: "/contact" },
 ] as const;
@@ -56,7 +56,7 @@ const Header = () => {
               >
                 <img
                   src={logo}
-                  alt="cedarcare Hospital"
+                  alt="Cedarcare Hospital"
                   className={`h-10 md:h-12 w-auto transition-all duration-500 ${
                     isScrolled
                       ? ""

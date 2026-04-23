@@ -6,10 +6,10 @@ import PageTransition from "@/components/PageTransition";
 
 import doctorPatientNew from "@/assets/doctor-patient-new.jpg";
 import hospitalBuilding from "@/assets/hospital-building.jpg";
-import cedarcarePharmacy from "@/assets/cedarcare-pharmacy.jpg";
-import cedarcareWard from "@/assets/cedarcare-ward.jpg";
-import cedarcareLabTechnician from "@/assets/cedarcare-lab-technician.jpg";
-import cedarcareMicroscopy from "@/assets/cedarcare-microscopy.jpg";
+import CedarcarePharmacy from "@/assets/Cedarcare-pharmacy.jpg";
+import CedarcareWard from "@/assets/Cedarcare-ward.jpg";
+import CedarcareLabTechnician from "@/assets/Cedarcare-lab-technician.jpg";
+import CedarcareMicroscopy from "@/assets/Cedarcare-microscopy.jpg";
 
 const services = [
   {
@@ -28,25 +28,25 @@ const services = [
     icon: Heart,
     title: "Obstetrics & Gynecology",
     description: "Comprehensive women's healthcare, including antenatal care, safe delivery, postnatal services, and gynecological treatments.",
-    image: cedarcareWard,
+    image: CedarcareWard,
   },
   {
     icon: FlaskConical,
     title: "Diagnostics & Laboratory",
     description: "Accurate diagnostic services using modern equipment for fast, reliable test results.",
-    image: cedarcareLabTechnician,
+    image: CedarcareLabTechnician,
   },
   {
     icon: Pill,
     title: "Pharmacy Services",
     description: "Safe and professional medication dispensing with strict quality control and patient counseling.",
-    image: cedarcarePharmacy,
+    image: CedarcarePharmacy,
   },
   {
     icon: Ambulance,
     title: "Emergency & Inpatient Care",
     description: "24/7 medical attention with well-trained staff and fully equipped inpatient facilities.",
-    image: cedarcareMicroscopy,
+    image: CedarcareMicroscopy,
   },
 ];
 
@@ -76,7 +76,7 @@ const Services = () => {
                  Our <span className="text-[hsl(217,91%,60%)]">Services</span>
                </h1>
                <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-                 Comprehensive Healthcare Services at cedarcare Hospital. We offer a full spectrum of medical services designed to meet the healthcare needs of individuals, families, and communities.
+                 Comprehensive Healthcare Services at Cedarcare Hospital. We offer a full spectrum of medical services designed to meet the healthcare needs of individuals, families, and communities.
                </p>
              </motion.div>
            </div>

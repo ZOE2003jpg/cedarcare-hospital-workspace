@@ -27,7 +27,7 @@ const About = () => {
           <div className="absolute inset-0">
             <img
               src={hospitalBuilding}
-              alt="cedarcare Hospital"
+              alt="Cedarcare Hospital"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/80 to-[hsl(210,50%,10%)]/60" />
@@ -41,7 +41,7 @@ const About = () => {
               className="max-w-3xl"
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-                <span className="text-sm text-white/90 font-medium">About cedarcare Hospital</span>
+                <span className="text-sm text-white/90 font-medium">About Cedarcare Hospital</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Who We <span className="text-[hsl(217,91%,60%)]">Are</span>
@@ -94,11 +94,11 @@ const About = () => {
                 transition={{ duration: 0.8 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-                  About cedarcare Hospital
+                  About Cedarcare Hospital
                 </h2>
 
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  cedarcare Hospital is a patient-focused healthcare provider committed to delivering accessible, 
+                  Cedarcare Hospital is a patient-focused healthcare provider committed to delivering accessible, 
                   ethical, and high-quality medical services. We believe healthcare should be compassionate, 
                   professional, and rooted in integrity.
                 </p>
@@ -154,7 +154,7 @@ const About = () => {
                 Our Core Values
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                The principles that guide everything we do at cedarcare Hospital
+                The principles that guide everything we do at Cedarcare Hospital
               </p>
             </motion.div>
 

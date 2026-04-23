@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import cedarcarePharmacy from "@/assets/cedarcare-pharmacy.jpg";
+import CedarcarePharmacy from "@/assets/Cedarcare-pharmacy.jpg";
 
 const blogPosts = [
   {
@@ -54,7 +54,7 @@ const Blog = () => {
       {/* Hero Section */}
        <section className="relative pt-32 pb-20 overflow-hidden">
          <div className="absolute inset-0">
-           <img src={cedarcarePharmacy} alt="Health Blog" className="w-full h-full object-cover" />
+           <img src={CedarcarePharmacy} alt="Health Blog" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,50%,10%)]/95 via-[hsl(210,50%,10%)]/80 to-[hsl(210,50%,10%)]/60" />
          </div>
          <div className="container mx-auto px-4 md:px-8 relative z-10">
