@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
-import { Stethoscope, Heart, Pill, Building2, Shield, ArrowRight, Phone, Mail, Play } from "lucide-react";
+import { Stethoscope, Heart, Pill, Building2, Shield, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import CedarcareLabTechnician from "@/assets/cedarcare-lab-technician.jpg";
@@ -21,7 +21,6 @@ const departments = [
       "Medical Certificates"
     ],
     color: "hsl(217, 91%, 60%)",
-    hasVideo: true,
   },
   {
     icon: Heart,
@@ -36,7 +35,6 @@ const departments = [
       "Post-operative Care"
     ],
     color: "hsl(195, 35%, 30%)",
-    hasVideo: false,
   },
   {
     icon: Pill,
@@ -51,7 +49,6 @@ const departments = [
       "Immunizations"
     ],
     color: "hsl(217, 91%, 60%)",
-    hasVideo: true,
   },
   {
     icon: Building2,
@@ -66,7 +63,6 @@ const departments = [
       "Facility Management"
     ],
     color: "hsl(195, 35%, 30%)",
-    hasVideo: false,
   },
   {
     icon: Shield,
@@ -81,7 +77,6 @@ const departments = [
       "Coverage Guidance"
     ],
     color: "hsl(217, 91%, 60%)",
-    hasVideo: false,
   },
 ];
 
@@ -111,7 +106,7 @@ const Departments = () => {
                <span className="text-[hsl(217,91%,60%)]">Departments</span>
              </h1>
              <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-               Departments Overview. Explore our specialized departments providing comprehensive care across all medical disciplines, each staffed with experienced professionals dedicated to your wellbeing.
+               Explore our specialized departments, each providing comprehensive care across a range of medical disciplines and staffed with experienced professionals dedicated to your wellbeing.
              </p>
            </motion.div>
          </div>
@@ -138,12 +133,6 @@ const Departments = () => {
                   <dept.icon className="w-24 h-24 mb-6" />
                   <h3 className="text-2xl font-bold text-center mb-2">{dept.name}</h3>
                   <p className="text-white/80 text-center">{dept.role}</p>
-                  {dept.hasVideo && (
-                    <button className="mt-6 flex items-center gap-2 px-6 py-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
-                      <Play className="w-5 h-5" />
-                      <span>Watch Video</span>
-                    </button>
-                  )}
                 </div>
                 
                 {/* Content Section */}
@@ -153,7 +142,7 @@ const Departments = () => {
                   </p>
                   
                   <h4 className="font-semibold text-foreground mb-4">Key Services:</h4>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {dept.services.map((service) => (
                       <li key={service} className="flex items-center text-muted-foreground">
                         <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: dept.color }} />
@@ -161,13 +150,6 @@ const Departments = () => {
                       </li>
                     ))}
                   </ul>
-                  
-                  <Link 
-                    to="/contact"
-                    className="inline-flex items-center text-primary font-medium hover:gap-3 gap-2 transition-all"
-                  >
-                    View More <ArrowRight className="w-4 h-4" />
-                  </Link>
                 </div>
               </motion.div>
             ))}
