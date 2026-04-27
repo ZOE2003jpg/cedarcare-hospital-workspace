@@ -133,12 +133,6 @@ const Departments = () => {
                   <dept.icon className="w-24 h-24 mb-6" />
                   <h3 className="text-2xl font-bold text-center mb-2">{dept.name}</h3>
                   <p className="text-white/80 text-center">{dept.role}</p>
-                  {dept.hasVideo && (
-                    <button className="mt-6 flex items-center gap-2 px-6 py-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
-                      <Play className="w-5 h-5" />
-                      <span>Watch Video</span>
-                    </button>
-                  )}
                 </div>
                 
                 {/* Content Section */}
@@ -148,7 +142,7 @@ const Departments = () => {
                   </p>
                   
                   <h4 className="font-semibold text-foreground mb-4">Key Services:</h4>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {dept.services.map((service) => (
                       <li key={service} className="flex items-center text-muted-foreground">
                         <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: dept.color }} />
@@ -156,13 +150,6 @@ const Departments = () => {
                       </li>
                     ))}
                   </ul>
-                  
-                  <Link 
-                    to="/contact"
-                    className="inline-flex items-center text-primary font-medium hover:gap-3 gap-2 transition-all"
-                  >
-                    View More <ArrowRight className="w-4 h-4" />
-                  </Link>
                 </div>
               </motion.div>
             ))}
