@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Stethoscope, Baby, Heart, FlaskConical, Pill, Ambulance } from "lucide-react";
+import {
+  Stethoscope,
+  Baby,
+  Heart,
+  FlaskConical,
+  Pill,
+  Ambulance,
+  Brain,
+  Ear,
+  Sparkles,
+  Activity,
+} from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 
 import doctorPatientNew from "@/assets/doctor-patient-new.jpg";
@@ -11,44 +22,122 @@ import CedarcareWard from "@/assets/cedarcare-ward.jpg";
 import CedarcareLabTechnician from "@/assets/cedarcare-lab-technician.jpg";
 import CedarcareMicroscopy from "@/assets/cedarcare-microscopy.jpg";
 
-const services = [
+const clinicalServices = [
   {
     icon: Stethoscope,
     title: "General Consultation / Family Medicine",
-    description: "Our family medicine physicians provide holistic care for all ages, focusing on prevention, diagnosis, and long-term health management.",
+    description:
+      "Our family medicine physicians provide holistic care for all ages, focusing on prevention, diagnosis, and long-term health management.",
     image: doctorPatientNew,
   },
   {
     icon: Baby,
     title: "Pediatrics",
-    description: "Expert medical care for infants, children, and adolescents, including immunization, growth monitoring, and childhood illness management.",
+    description:
+      "Expert medical care for infants, children, and adolescents, including immunization, growth monitoring, and childhood illness management.",
     image: hospitalBuilding,
   },
   {
     icon: Heart,
     title: "Obstetrics & Gynecology",
-    description: "Comprehensive women's healthcare, including antenatal care, safe delivery, postnatal services, and gynecological treatments.",
+    description:
+      "Comprehensive women's healthcare, including antenatal care, safe delivery, postnatal services, and gynecological treatments.",
     image: CedarcareWard,
+  },
+  {
+    icon: Brain,
+    title: "Psychiatry",
+    description:
+      "Compassionate mental health care including assessment, counseling, and ongoing treatment for a wide range of psychological and emotional conditions.",
+    image: doctorPatientNew,
   },
   {
     icon: FlaskConical,
     title: "Diagnostics & Laboratory",
-    description: "Accurate diagnostic services using modern equipment for fast, reliable test results.",
+    description:
+      "Accurate diagnostic services using modern equipment for fast, reliable test results.",
     image: CedarcareLabTechnician,
   },
   {
     icon: Pill,
     title: "Pharmacy Services",
-    description: "Safe and professional medication dispensing with strict quality control and patient counseling.",
+    description:
+      "Safe and professional medication dispensing with strict quality control and patient counseling.",
     image: CedarcarePharmacy,
   },
+];
+
+const emergencyServices = [
   {
     icon: Ambulance,
     title: "Emergency & Inpatient Care",
-    description: "24/7 medical attention with well-trained staff and fully equipped inpatient facilities.",
+    description:
+      "24/7 medical attention with well-trained staff and fully equipped inpatient facilities for urgent and admitted patients.",
     image: CedarcareMicroscopy,
   },
 ];
+
+const otherServices = [
+  {
+    icon: Ear,
+    title: "ENT (Ear, Nose & Throat)",
+    description:
+      "Specialized care for hearing, sinus, throat, and balance disorders, with both medical and minor surgical management.",
+    image: doctorPatientNew,
+  },
+  {
+    icon: Sparkles,
+    title: "Dermatology",
+    description:
+      "Diagnosis and treatment of skin, hair, and nail conditions, from common concerns to chronic dermatological disorders.",
+    image: CedarcareWard,
+  },
+  {
+    icon: Activity,
+    title: "Gastroenterology",
+    description:
+      "Expert evaluation and management of digestive, liver, and gastrointestinal conditions for lasting relief and better wellbeing.",
+    image: hospitalBuilding,
+  },
+];
+
+const ServiceCard = ({
+  service,
+  index,
+}: {
+  service: { icon: any; title: string; description: string; image: string };
+  index: number;
+}) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: index * 0.1 }}
+    className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
+  >
+    <div className="relative h-48 overflow-hidden">
+      <img
+        src={service.image}
+        alt={service.title}
+        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
+      <div className="absolute bottom-4 left-4">
+        <div className="w-14 h-14 rounded-xl bg-[hsl(217,91%,60%)] flex items-center justify-center shadow-lg">
+          <service.icon className="w-7 h-7 text-white" />
+        </div>
+      </div>
+    </div>
+    <div className="p-6">
+      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+        {service.title}
+      </h3>
+      <p className="text-muted-foreground leading-relaxed mb-4">
+        {service.description}
+      </p>
+    </div>
+  </motion.div>
+);
 
 const Services = () => {
   return (
