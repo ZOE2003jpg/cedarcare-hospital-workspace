@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
-import { Stethoscope, Heart, Pill, Building2, Shield, ArrowRight, Phone, Mail, Play } from "lucide-react";
+import { Stethoscope, Heart, Pill, Building2, Shield, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import CedarcareLabTechnician from "@/assets/cedarcare-lab-technician.jpg";
@@ -21,7 +21,6 @@ const departments = [
       "Medical Certificates"
     ],
     color: "hsl(217, 91%, 60%)",
-    hasVideo: true,
   },
   {
     icon: Heart,
@@ -36,7 +35,6 @@ const departments = [
       "Post-operative Care"
     ],
     color: "hsl(195, 35%, 30%)",
-    hasVideo: false,
   },
   {
     icon: Pill,
@@ -51,7 +49,6 @@ const departments = [
       "Immunizations"
     ],
     color: "hsl(217, 91%, 60%)",
-    hasVideo: true,
   },
   {
     icon: Building2,
@@ -66,7 +63,6 @@ const departments = [
       "Facility Management"
     ],
     color: "hsl(195, 35%, 30%)",
-    hasVideo: false,
   },
   {
     icon: Shield,
@@ -81,7 +77,6 @@ const departments = [
       "Coverage Guidance"
     ],
     color: "hsl(217, 91%, 60%)",
-    hasVideo: false,
   },
 ];
 
@@ -111,7 +106,7 @@ const Departments = () => {
                <span className="text-[hsl(217,91%,60%)]">Departments</span>
              </h1>
              <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-               Departments Overview. Explore our specialized departments providing comprehensive care across all medical disciplines, each staffed with experienced professionals dedicated to your wellbeing.
+               Explore our specialized departments, each providing comprehensive care across a range of medical disciplines and staffed with experienced professionals dedicated to your wellbeing.
              </p>
            </motion.div>
          </div>
