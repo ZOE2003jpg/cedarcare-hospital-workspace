@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import WordPressPosts from "@/components/WordPressPosts";
 import { Heart, Activity, Baby, Shield, Stethoscope } from "lucide-react";
 import CedarcareWard from "@/assets/cedarcare-ward.jpg";
 import { Button } from "@/components/ui/button";
