@@ -204,3 +204,126 @@
     }
   }
 }
+
+/* WordPress modal content styling */
+.wp-modal-content {
+  color: hsl(var(--foreground));
+  font-size: 1rem;
+  line-height: 1.75;
+  word-wrap: break-word;
+}
+
+.wp-modal-content > * + * {
+  margin-top: 1.1em;
+}
+
+.wp-modal-content p {
+  margin: 0 0 1.1em;
+  line-height: 1.75;
+}
+
+.wp-modal-content h1,
+.wp-modal-content h2,
+.wp-modal-content h3,
+.wp-modal-content h4 {
+  color: hsl(var(--foreground));
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 1.8em 0 0.6em;
+}
+
+.wp-modal-content h2 { font-size: 1.5rem; }
+.wp-modal-content h3 { font-size: 1.25rem; }
+.wp-modal-content h4 { font-size: 1.1rem; }
+
+.wp-modal-content a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.wp-modal-content ul,
+.wp-modal-content ol {
+  padding-left: 1.5rem;
+  margin: 0 0 1.1em;
+}
+
+.wp-modal-content ul { list-style: disc; }
+.wp-modal-content ol { list-style: decimal; }
+
+.wp-modal-content li {
+  margin-bottom: 0.5em;
+  line-height: 1.7;
+}
+
+.wp-modal-content li::marker {
+  color: hsl(var(--primary));
+}
+
+.wp-modal-content blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  padding: 0.5em 1em;
+  margin: 1.2em 0;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+  background: hsl(var(--muted) / 0.4);
+  border-radius: 0.25rem;
+}
+
+.wp-modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.2em 0;
+}
+
+.wp-modal-content figure {
+  margin: 1.2em 0;
+}
+
+.wp-modal-content figcaption {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.wp-modal-content code {
+  background: hsl(var(--muted));
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+
+.wp-modal-content pre {
+  background: hsl(var(--muted));
+  padding: 1em;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.2em 0;
+}
+
+.wp-modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+}
+
+.wp-modal-content th,
+.wp-modal-content td {
+  border: 1px solid hsl(var(--border));
+  padding: 0.6em 0.8em;
+  text-align: left;
+}
+
+.wp-modal-content th {
+  background: hsl(var(--muted));
+  font-weight: 600;
+}
+
+.wp-modal-content hr {
+  border: 0;
+  border-top: 1px solid hsl(var(--border));
+  margin: 2em 0;
+}
+
