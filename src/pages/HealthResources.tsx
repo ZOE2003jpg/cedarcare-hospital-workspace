@@ -139,6 +139,8 @@ const HealthResources = () => {
       </section>
 
 
+      <WordPressPosts />
+
       {/* Wellness Tips */}
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-8">
@@ -201,8 +203,6 @@ const HealthResources = () => {
           </div>
         </div>
       </section>
-
-      <WordPressPosts />
 
       <Footer />
     </div>

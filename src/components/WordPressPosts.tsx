@@ -55,7 +55,7 @@ const WordPressPosts = () => {
         const categoryId = cats[0].id;
 
         const postsRes = await fetch(
-          `${WP_BASE}/posts?categories=${categoryId}&_embed`
+          `${WP_BASE}/posts?categories=${categoryId}&per_page=9&_embed`
         );
         if (!postsRes.ok) throw new Error("Failed to load posts");
         const data: WPPost[] = await postsRes.json();
