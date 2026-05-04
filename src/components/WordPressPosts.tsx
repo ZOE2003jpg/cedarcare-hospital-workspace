@@ -76,10 +76,10 @@ const WordPressPosts = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Latest from Our Blog
+            Latest Health Resources
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Fresh health insights and updates from the Cedarcare team.
+            Fresh articles published on our WordPress site, updated automatically.
           </p>
         </motion.div>
 
