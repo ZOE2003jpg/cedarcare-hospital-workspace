@@ -204,8 +204,6 @@ const HealthResources = () => {
         </div>
       </section>
 
-      <WordPressPosts />
-
       <Footer />
     </div>
     </PageTransition>
