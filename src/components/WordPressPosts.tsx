@@ -3,12 +3,19 @@ import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface WPPost {
   id: number;
   link: string;
   title: { rendered: string };
   excerpt: { rendered: string };
+  content: { rendered: string };
   _embedded?: {
     "wp:featuredmedia"?: Array<{
       source_url?: string;
@@ -27,6 +34,7 @@ const WordPressPosts = () => {
   const [posts, setPosts] = useState<WPPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [activePost, setActivePost] = useState<WPPost | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -79,7 +87,7 @@ const WordPressPosts = () => {
             Latest Health Resources
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Fresh articles published on our WordPress site, updated automatically.
+            Fresh articles from our medical team, updated regularly.
           </p>
         </motion.div>
 
@@ -149,20 +157,15 @@ const WordPressPosts = () => {
                     <p className="text-muted-foreground leading-relaxed mb-6 line-clamp-3 flex-1">
                       {excerpt}
                     </p>
-                    <a
-                      href={post.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-auto"
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="rounded-full group/btn mt-auto self-start"
+                      onClick={() => setActivePost(post)}
                     >
-                      <Button
-                        variant="outline"
-                        className="rounded-full group/btn"
-                      >
-                        Read More
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </Button>
-                    </a>
+                      Read More
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
                   </div>
                 </motion.article>
               );
@@ -170,6 +173,46 @@ const WordPressPosts = () => {
           </div>
         )}
       </div>
+
+      <Dialog
+        open={!!activePost}
+        onOpenChange={(open) => !open && setActivePost(null)}
+      >
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+          {activePost && (
+            <>
+              <DialogHeader>
+                <DialogTitle
+                  className="text-2xl md:text-3xl font-bold text-foreground pr-8"
+                  dangerouslySetInnerHTML={{
+                    __html: activePost.title.rendered,
+                  }}
+                />
+              </DialogHeader>
+              {(() => {
+                const media =
+                  activePost._embedded?.["wp:featuredmedia"]?.[0];
+                const image = media?.source_url;
+                const alt =
+                  media?.alt_text || stripHtml(activePost.title.rendered);
+                return image ? (
+                  <img
+                    src={image}
+                    alt={alt}
+                    className="w-full h-64 md:h-80 object-cover rounded-lg"
+                  />
+                ) : null;
+              })()}
+              <div
+                className="prose prose-sm md:prose-base max-w-none text-foreground prose-headings:text-foreground prose-a:text-primary"
+                dangerouslySetInnerHTML={{
+                  __html: activePost.content.rendered,
+                }}
+              />
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
