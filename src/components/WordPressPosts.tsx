@@ -178,12 +178,12 @@ const WordPressPosts = () => {
         open={!!activePost}
         onOpenChange={(open) => !open && setActivePost(null)}
       >
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="w-[95vw] sm:max-w-[800px] max-h-[90vh] overflow-y-auto p-0">
           {activePost && (
-            <>
+            <div className="p-6 md:p-8">
               <DialogHeader>
                 <DialogTitle
-                  className="text-2xl md:text-3xl font-bold text-foreground pr-8"
+                  className="text-2xl md:text-3xl font-bold text-foreground pr-8 mb-4"
                   dangerouslySetInnerHTML={{
                     __html: activePost.title.rendered,
                   }}
@@ -199,17 +199,17 @@ const WordPressPosts = () => {
                   <img
                     src={image}
                     alt={alt}
-                    className="w-full h-64 md:h-80 object-cover rounded-lg"
+                    className="w-full h-64 md:h-80 object-cover rounded-lg mb-6"
                   />
                 ) : null;
               })()}
               <div
-                className="prose prose-sm md:prose-base max-w-none text-foreground prose-headings:text-foreground prose-a:text-primary"
+                className="wp-modal-content"
                 dangerouslySetInnerHTML={{
                   __html: activePost.content.rendered,
                 }}
               />
-            </>
+            </div>
           )}
         </DialogContent>
       </Dialog>
