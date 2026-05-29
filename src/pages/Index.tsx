@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import WordPressEvents from "@/components/WordPressEvents";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WaterDropAnimation from "@/components/WaterDropAnimation";
@@ -13,6 +14,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <WhyChooseUsSection />
+        <WordPressEvents />
         <CTASection />
       </main>
       <Footer />
