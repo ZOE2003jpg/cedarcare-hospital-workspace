@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Calendar } from "lucide-react";
 
 interface WPEvent {
   id: number;
@@ -48,7 +41,6 @@ const WordPressEvents = () => {
   const [events, setEvents] = useState<WPEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [activeEvent, setActiveEvent] = useState<WPEvent | null>(null);
   const [categoryId, setCategoryId] = useState<number | null>(null);
 
   // Resolve category once
@@ -158,8 +150,7 @@ const WordPressEvents = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  onClick={() => setActiveEvent(event)}
-                  className="group relative rounded-2xl shadow-lg overflow-hidden cursor-pointer h-80 flex items-end"
+                  className="group relative rounded-2xl shadow-lg overflow-hidden h-80"
                 >
                   {image ? (
                     <img
@@ -173,70 +164,12 @@ const WordPressEvents = () => {
                       <Calendar className="w-16 h-16 text-muted-foreground" />
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="relative p-6 text-white">
-                    <div className="flex items-center gap-2 text-sm text-white/80 mb-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{formatDate(event.date)}</span>
-                    </div>
-                    <h3
-                      className="text-xl font-bold mb-3 line-clamp-2"
-                      dangerouslySetInnerHTML={{ __html: event.title.rendered }}
-                    />
-                    <span className="inline-flex items-center text-sm font-medium group-hover:underline">
-                      View details
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
                 </motion.article>
               );
             })}
           </div>
         )}
       </div>
-
-      <Dialog
-        open={!!activeEvent}
-        onOpenChange={(open) => !open && setActiveEvent(null)}
-      >
-        <DialogContent className="w-[95vw] sm:max-w-[800px] max-h-[90vh] overflow-y-auto p-0">
-          {activeEvent && (
-            <div className="p-6 md:p-8">
-              <DialogHeader>
-                <DialogTitle
-                  className="text-2xl md:text-3xl font-bold text-foreground pr-8 mb-2"
-                  dangerouslySetInnerHTML={{
-                    __html: activeEvent.title.rendered,
-                  }}
-                />
-              </DialogHeader>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
-                <Calendar className="w-4 h-4" />
-                <span>{formatDate(activeEvent.date)}</span>
-              </div>
-              {(() => {
-                const media = activeEvent._embedded?.["wp:featuredmedia"]?.[0];
-                const image = media?.source_url;
-                const alt =
-                  media?.alt_text || stripHtml(activeEvent.title.rendered);
-                return image ? (
-                  <img
-                    src={image}
-                    alt={alt}
-                    className="w-full h-64 md:h-80 object-cover rounded-lg mb-6"
-                  />
-                ) : null;
-              })()}
-              <div
-                className="wp-modal-content"
-                dangerouslySetInnerHTML={{
-                  __html: activeEvent.content.rendered,
-                }}
-              />
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };
