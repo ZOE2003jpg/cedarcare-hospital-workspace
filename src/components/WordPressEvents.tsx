@@ -25,6 +25,11 @@ const PER_PAGE = 6;
 const stripHtml = (html: string) =>
   html.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 
+const firstContentImage = (html: string): string | undefined => {
+  const match = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+  return match?.[1];
+};
+
 const formatDate = (iso: string) => {
   try {
     return new Date(iso).toLocaleDateString(undefined, {
