@@ -156,17 +156,17 @@ const WordPressEvents = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group relative rounded-2xl shadow-lg overflow-hidden h-80"
+                  className="group rounded-2xl shadow-lg overflow-hidden bg-white"
                 >
                   {image ? (
                     <img
                       src={image}
                       alt={alt}
                       loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-auto object-contain"
                     />
                   ) : (
-                    <div className="absolute inset-0 bg-secondary flex items-center justify-center">
+                    <div className="w-full aspect-[3/4] bg-secondary flex items-center justify-center">
                       <Calendar className="w-16 h-16 text-muted-foreground" />
                     </div>
                   )}
