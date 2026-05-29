@@ -25,6 +25,11 @@ const PER_PAGE = 6;
 const stripHtml = (html: string) =>
   html.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 
+const firstContentImage = (html: string): string | undefined => {
+  const match = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+  return match?.[1];
+};
+
 const formatDate = (iso: string) => {
   try {
     return new Date(iso).toLocaleDateString(undefined, {
@@ -140,7 +145,8 @@ const WordPressEvents = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, index) => {
               const media = event._embedded?.["wp:featuredmedia"]?.[0];
-              const image = media?.source_url;
+              const image =
+                media?.source_url || firstContentImage(event.content.rendered);
               const alt = media?.alt_text || stripHtml(event.title.rendered);
 
               return (
