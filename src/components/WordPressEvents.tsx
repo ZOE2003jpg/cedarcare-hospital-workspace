@@ -145,7 +145,8 @@ const WordPressEvents = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, index) => {
               const media = event._embedded?.["wp:featuredmedia"]?.[0];
-              const image = media?.source_url;
+              const image =
+                media?.source_url || firstContentImage(event.content.rendered);
               const alt = media?.alt_text || stripHtml(event.title.rendered);
 
               return (
