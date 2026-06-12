@@ -14,7 +14,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <WhyChooseUsSection />
-        <WordPressEvents />
+        <WordPressEvents limit={3} showSeeMore />
         <CTASection />
       </main>
       <Footer />
