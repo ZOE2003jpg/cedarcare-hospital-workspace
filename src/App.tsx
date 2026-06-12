@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Departments from "./pages/Departments";
 import HealthResources from "./pages/HealthResources";
+import EventsMedia from "./pages/EventsMedia";
 import Blog from "./pages/Blog";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
