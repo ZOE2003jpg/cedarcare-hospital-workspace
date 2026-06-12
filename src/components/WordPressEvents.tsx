@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Calendar } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 interface WPEvent {
   id: number;
@@ -20,7 +22,6 @@ interface WPEvent {
 
 const WP_BASE = "https://www.cedarcaregroup.com/hospital/wp-json/wp/v2";
 const CATEGORY_SLUG = "upcoming-event";
-const PER_PAGE = 6;
 
 const stripHtml = (html: string) =>
   html.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
@@ -30,19 +31,23 @@ const firstContentImage = (html: string): string | undefined => {
   return match?.[1];
 };
 
-const formatDate = (iso: string) => {
-  try {
-    return new Date(iso).toLocaleDateString(undefined, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  } catch {
-    return "";
-  }
-};
+interface WordPressEventsProps {
+  /** Max number of flyers to show. Omit for all. */
+  limit?: number;
+  /** Show a "See more" link to the dedicated events page. */
+  showSeeMore?: boolean;
+  /** Section heading text. */
+  heading?: string;
+  /** Section subheading text. */
+  subheading?: string;
+}
 
-const WordPressEvents = () => {
+const WordPressEvents = ({
+  limit = 6,
+  showSeeMore = false,
+  heading = "Upcoming Events",
+  subheading = "Join us at our upcoming events, camps, and community programs.",
+}: WordPressEventsProps) => {
   const [events, setEvents] = useState<WPEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -79,7 +84,7 @@ const WordPressEvents = () => {
         setLoading(true);
         setError(null);
         const res = await fetch(
-          `${WP_BASE}/posts?categories=${categoryId}&per_page=${PER_PAGE}&_embed`
+          `${WP_BASE}/posts?categories=${categoryId}&per_page=${limit}&_embed`
         );
         if (!res.ok) throw new Error("Failed to load events");
         const data: WPEvent[] = await res.json();
@@ -93,16 +98,13 @@ const WordPressEvents = () => {
     return () => {
       cancelled = true;
     };
-  }, [categoryId]);
+  }, [categoryId, limit]);
 
   // Hide the whole section when there are no events and nothing loading/errored
   if (!loading && !error && events.length === 0) return null;
 
   return (
-    <section
-      id="upcoming-events"
-      className="py-20 md:py-28 scroll-mt-24"
-    >
+    <section id="upcoming-events" className="py-20 md:py-28 scroll-mt-24">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -111,25 +113,19 @@ const WordPressEvents = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Upcoming Events
+            {heading}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Join us at our upcoming events, camps, and community programs.
-          </p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{subheading}</p>
         </motion.div>
 
         {loading && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[0, 1, 2].map((i) => (
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+            {[0, 1, 2, 3].map((i) => (
               <div
                 key={i}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden"
               >
-                <Skeleton className="w-full h-64" />
-                <div className="p-6 space-y-3">
-                  <Skeleton className="h-6 w-3/4" />
-                  <Skeleton className="h-4 w-1/2" />
-                </div>
+                <Skeleton className="w-full aspect-[3/4]" />
               </div>
             ))}
           </div>
@@ -142,7 +138,7 @@ const WordPressEvents = () => {
         )}
 
         {!loading && !error && events.length > 0 && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {events.map((event, index) => {
               const media = event._embedded?.["wp:featuredmedia"]?.[0];
               const image =
@@ -173,6 +169,17 @@ const WordPressEvents = () => {
                 </motion.article>
               );
             })}
+          </div>
+        )}
+
+        {showSeeMore && !loading && !error && events.length > 0 && (
+          <div className="text-center mt-12">
+            <Link to="/events">
+              <Button className="rounded-full px-8 group">
+                See more
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         )}
       </div>
