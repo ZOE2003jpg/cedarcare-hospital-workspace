@@ -52,8 +52,7 @@ const EventsMedia = () => {
 
         {/* Media — photo gallery */}
         <div className="bg-secondary/40">
-          <WordPressEvents
-            variant="media"
+          <MediaGallery
             heading="Media Gallery"
             subheading="Moments captured from our health camps, outreaches, and community programs."
           />
