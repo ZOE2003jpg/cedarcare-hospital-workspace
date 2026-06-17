@@ -69,7 +69,7 @@ const CTASection = () => {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto"
           >
-            Experience world-class healthcare services. Book an appointment today or visit any of our facilities.
+            Experience world-class healthcare services. Call us to book an appointment today or visit any of our facilities.
           </motion.p>
 
           {/* CTA Buttons */}
