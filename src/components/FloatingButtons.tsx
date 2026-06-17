@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, MessageCircle, Calendar, X } from "lucide-react";
+import { Phone, MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
 const FloatingButtons = () => {
