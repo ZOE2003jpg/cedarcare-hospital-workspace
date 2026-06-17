@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/cedarcare-logo-white.png";
+import logo from "@/assets/cedarcare-logo.png";
 
 // Custom X (formerly Twitter) icon
 const XIcon = ({ className }: { className?: string }) => (
@@ -63,7 +63,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Cedarcare Hospital" 
-                className="h-14 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+                className="h-14 w-auto brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
               />
             </motion.a>
 
