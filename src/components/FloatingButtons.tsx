@@ -7,12 +7,6 @@ const FloatingButtons = () => {
 
   const buttons = [
     {
-      icon: Calendar,
-      label: "Book Appointment",
-      href: "/contact",
-      color: "bg-primary hover:bg-primary/90",
-    },
-    {
       icon: Phone,
       label: "Call Now",
       href: "tel:+2347062641810",
