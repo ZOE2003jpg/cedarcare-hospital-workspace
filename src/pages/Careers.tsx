@@ -109,13 +109,10 @@ const Careers = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              No Current Openings
+              Future Opportunities
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              We do not currently have any open vacancies or internship positions. However, we are always interested in hearing from talented and passionate healthcare professionals.
-            </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              If you would like to be considered for future opportunities, please apply directly through our HR portal.
+              We are always interested in hearing from talented and passionate healthcare professionals. If you would like to be considered for opportunities, please apply directly through our HR portal.
             </p>
             <a
               href="https://apply.bizedgeapp.com/cedarcare-hospital/175469876032/315"
