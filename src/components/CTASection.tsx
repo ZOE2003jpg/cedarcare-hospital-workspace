@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, Calendar, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+
 
 const CTASection = () => {
   return (
@@ -69,7 +69,7 @@ const CTASection = () => {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto"
           >
-            Experience world-class healthcare services. Book an appointment today or visit any of our facilities.
+            Experience world-class healthcare services. Call us to book an appointment today or visit any of our facilities.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -80,23 +80,13 @@ const CTASection = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap justify-center gap-4 mb-16"
           >
-            <Link to="/contact">
-               <Button 
+            <a href="tel:+2347062641810">
+               <Button
                  size="lg"
                  className="bg-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,50%)] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                >
-                 <Calendar className="w-5 h-5 mr-2" />
-                 Book Appointment
-               </Button>
-             </Link>
-             <a href="tel:+2347062641810">
-               <Button
-                 size="lg"
-                 variant="outline"
-                 className="border-2 border-white/30 bg-white/5 text-white hover:bg-white/10 hover:border-white/50 px-8 py-6 text-lg rounded-full backdrop-blur-sm"
-               >
                  <Phone className="w-5 h-5 mr-2" />
-                 Call Us Now
+                 Call to Book an Appointment
                </Button>
              </a>
           </motion.div>

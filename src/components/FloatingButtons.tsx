@@ -1,17 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, MessageCircle, Calendar, X } from "lucide-react";
+import { Phone, MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
 const FloatingButtons = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const buttons = [
-    {
-      icon: Calendar,
-      label: "Book Appointment",
-      href: "/contact",
-      color: "bg-primary hover:bg-primary/90",
-    },
     {
       icon: Phone,
       label: "Call Now",

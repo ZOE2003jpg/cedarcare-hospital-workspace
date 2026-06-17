@@ -78,7 +78,7 @@ const HealthResources = () => {
              <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
                <span className="text-sm text-white/90 font-medium">Stay Informed</span>
              </div>
-             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                Health <span className="text-[hsl(217,91%,60%)]">Resources</span>
              </h1>
              <p className="text-xl text-white/80 leading-relaxed max-w-2xl">

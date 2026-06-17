@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/cedarcare-logo.png";
+import logo from "@/assets/cedarcare-logo-white.png";
 
 // Custom X (formerly Twitter) icon
 const XIcon = ({ className }: { className?: string }) => (
