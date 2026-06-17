@@ -130,10 +130,12 @@ const Doctors = () => {
                     </div>
                   </div>
                   
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Book Appointment
-                  </Button>
+                  <a href="tel:+2347062641810" className="block">
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call to Book
+                    </Button>
+                  </a>
                 </div>
               </motion.div>
             ))}
