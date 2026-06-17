@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import WordPressEvents from "@/components/WordPressEvents";
+import MediaGallery from "@/components/MediaGallery";
 import eventsBg from "@/assets/events-health-camp.jpg.asset.json";
 
 const EventsMedia = () => {
